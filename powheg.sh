@@ -16,6 +16,9 @@ install -d ${INSTALLROOT}/bin
 export LIBRARY_PATH="$LD_LIBRARY_PATH"
 
 PROCESSES="dijet hvq W Z"
+if [ -z $FASTJET_VERSION ]; then
+  PROCESSES=${PROCESSES/'dijet '/''}
+fi
 for proc in ${PROCESSES}; do
     mkdir ${proc}/{obj,obj-gfortran}
     make -C ${proc}
