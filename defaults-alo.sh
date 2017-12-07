@@ -20,6 +20,8 @@ disable:
   - grpc
   - Ppconsul
   - ApMon-CPP
+  - Configuration
+  - Monitoring
 overrides:
   autotools:
     tag: v1.5.0
