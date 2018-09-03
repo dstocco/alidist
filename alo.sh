@@ -6,6 +6,7 @@ requires:
   - AliRoot
   - O2
   - RapidJSON
+  - FairLogger
 build_requires:
   - CMake
   - ms_gsl
@@ -36,6 +37,7 @@ cmake $SOURCEDIR \
     -DCMAKE_INSTALL_PREFIX="$INSTALLROOT" \
     -DALIROOT="$ALIROOT_ROOT" \
     -DO2="$O2_ROOT" \
+    ${FAIRLOGGER_ROOT:+-DFAIRLOGGER_ROOT=$FAIRLOGGER_ROOT}     \
     -DROOTSYS="$ROOT_ROOT" \
     -DRAPIDJSON_INCLUDEDIR="$RAPIDJSON_ROOT/include" \
     -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
