@@ -7,7 +7,6 @@ env:
   CXXSTD: "17"
   CMAKE_GENERATOR: "Ninja"
 disable:
-  - AliEn-Runtime
   - simulation
   - generators
   - GEANT4
@@ -19,7 +18,6 @@ disable:
   - pythia6
   - hijing
   - grpc
-  - ApMon-CPP
 overrides:
   autotools:
     tag: v1.5.0
